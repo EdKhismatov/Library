@@ -17,6 +17,7 @@ export default function BookForm() {
     const randomBookWithId = {
       ...randomBookr,
       id: uuidv4(),
+      isFavorite: false
     };
     dispatch(addBook(randomBookWithId));
   };
@@ -28,6 +29,7 @@ export default function BookForm() {
         title: title,
         author: author,
         id: uuidv4(),
+        isFavorite: false
       };
       dispatch(addBook(book));
       setTitle('');
